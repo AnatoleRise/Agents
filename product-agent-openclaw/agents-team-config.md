@@ -308,7 +308,7 @@ workspace 路径：`~/.openclaw/workspace`
 
 执行原则：
 
-- 请逐个将 `workspace/cache/product-agent-openclaw/`目录下，各子智能体对应 `AGENTS.md\SOUL.md\IDENTITY.md` 文件移动到对应子智能体workspace路径下，对应路径如下：
+- 请逐个将 `workspace/cache/product-agent-openclaw/`目录下，各子智能体对应 `AGENTS.md\SOUL.md\IDENTITY.md` 文件 及 `其他所有文件` 都移动到对应子智能体workspace路径下，对应路径如下：
 - 最小身份内容包含 4 项：子角色身份、职责边界、执行方式、禁止自称主 Agent。
 
 ### `customer_research`（客研需求智能体）
