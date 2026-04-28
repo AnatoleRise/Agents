@@ -173,6 +173,13 @@ openclaw agents list
 
 ## 第三步：主 Agent 人设文件
 
+> ⚠️ **重点强调：先读后融合，禁止直接覆盖**
+>
+> 写入模板前，必须先读取 `~/.openclaw/workspace/` 下是否已存在 `AGENTS.md`、`SOUL.md`、`IDENTITY.md`：
+> - **已有内容**：将下方模板作为补充框架，融合进已有内容，保留用户已有的个性化人设。
+> - **文件不存在或为空**：可直接写入模板内容。
+> - **禁止行为**：不得以模板直接覆盖或替换已有内容。
+
 workspace 路径：`~/.openclaw/workspace`
 
 说明：
@@ -306,46 +313,37 @@ workspace 路径：`~/.openclaw/workspace`
 
 ## 第四步：子 Agent 文件模板
 
-执行原则：
+### 目标
 
-- 请逐个将 `workspace/cache/product-agent-openclaw/`目录下，各子智能体对应 `AGENTS.md\SOUL.md\IDENTITY.md` 文件 及 `其他所有文件` 都移动到对应子智能体workspace路径下，对应路径如下：
-- 最小身份内容包含 4 项：子角色身份、职责边界、执行方式、禁止自称主 Agent。
+为 6 个子 Agent 各自创建最小人设文件：`AGENTS.md`、`SOUL.md`、`IDENTITY.md`，每个文件非空。
 
-### `customer_research`（客研需求智能体）
+### 执行流程
 
-workspace 路径：`~/.openclaw/workspace-customer-research`
+1. 先检查 `workspace/cache/product-agent-openclaw/` 下各子 Agent 目录是否已有现成文件。
+2. **有现成文件**：将该子目录下所有文件（含人设文件及其他）移动到目标 workspace，路径映射见下表。
+3. **无现成文件**：按下方模板创建，确保每个子 Agent 文件非空。
 
-子智能体路径：`/workspace/cache/product-agent-openclaw/customer_research/`
+### 路径映射
 
-### `product_discovery`（产品探索智能体）
+| 子 Agent | Workspace 路径 | 缓存源路径 |
+|---|---|---|
+| `customer_research` | `~/.openclaw/workspace-customer-research` | `workspace/cache/product-agent-openclaw/customer_research/` |
+| `product_discovery` | `~/.openclaw/workspace-product-discovery` | `workspace/cache/product-agent-openclaw/product_discovery/` |
+| `user_analysis` | `~/.openclaw/workspace-user-analysis` | `workspace/cache/product-agent-openclaw/user_analysis/` |
+| `requirement_management` | `~/.openclaw/workspace-requirement-management` | `workspace/cache/product-agent-openclaw/requirement_management/` |
+| `solution_design` | `~/.openclaw/workspace-solution-design` | `workspace/cache/product-agent-openclaw/solution_design/` |
+| `requirement_review` | `~/.openclaw/workspace-requirement-review` | `workspace/cache/product-agent-openclaw/requirement_review/` |
 
-workspace 路径：`~/.openclaw/workspace-product-discovery`
+### 子 Agent 最小人设内容
 
-子智能体路径：`/workspace/cache/product-agent-openclaw/product_discovery/`
+每个子 Agent 的 3 个文件至少包含以下 4 项：
 
-### `user_analysis`（用户分析智能体）
+1. **子角色身份**：明确说明自己是哪个子角色，隶属于主 Agent。
+2. **职责边界**：清晰列出负责和不负责的范围。
+3. **执行方式**：如何接收任务、如何输出结果、如何回传澄清。
+4. **禁止自称主 Agent**：明确写"我是主 Agent 的子角色，不代表主 Agent 对外"。
 
-workspace 路径：`~/.openclaw/workspace-user-analysis`
-
-子智能体路径：`/workspace/cache/product-agent-openclaw/user_analysis/`
-
-### `requirement_management`（需求管理智能体）
-
-workspace 路径：`~/.openclaw/workspace-requirement-management`
-
-子智能体路径：`/workspace/cache/product-agent-openclaw/requirement_management/`
-
-### `solution_design`（产品方案智能体）
-
-workspace 路径：`~/.openclaw/workspace-solution-design`
-
-子智能体路径：`/workspace/cache/product-agent-openclaw/solution_design/`
-
-### `requirement_review`（需求评审智能体）
-
-workspace 路径：`~/.openclaw/workspace-requirement-review`
-
-子智能体路径：`/workspace/cache/product-agent-openclaw/requirement_review/`
+> ⚠️ 与第三步相同：写入前先检查目标路径是否已有内容，有则融合，禁止直接覆盖。
 
 ## 第五步：协作与调度方式（主 Agent 规则）
 

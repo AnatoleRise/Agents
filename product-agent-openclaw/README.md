@@ -4,30 +4,33 @@
 
 ## 快速开始
 
-> **使用方式**：直接将以下内容发送给你的 OpenClaw：
+> **使用方式**：将以下提示词直接发送给你的 OpenClaw，即可启动一键配置。
 
 ```
 请帮我配置「产品全流程智能体团队」。
 
-**第一步：配置多 Agent 架构**
-- 访问 `https://github.com/AnatoleRise/Agents/blob/main/product-agent-openclaw/agents-team-config.md` 先将项目文件下载到 `workspace/cache` 目录下
-- 学习 `https://github.com/AnatoleRise/Agents/blob/main/product-agent-openclaw/agents-team-config.md` 多 Agent 配置方法，按照要求配置多Agent并移动相关文件，如果无法下载文件，则直接读取并安装
+**第一步：下载项目文件**
+- 从 `https://github.com/AnatoleRise/Agents/tree/main/product-agent-openclaw` 获取项目文件，完整下载到 `workspace/cache/product-agent-openclaw/` 目录下
+- 若网络原因无法下载，直接进行按照第二步来操作
+
+**第二步：配置多 Agent 架构**
+- 参考 `https://github.com/AnatoleRise/Agents/blob/main/product-agent-openclaw/agents-team-config.md` 中的配置说明，完成多 Agent 配置并将相关文件移动到位
 - 按步骤引导我完成
 
-**第二步：安装全部技能**
-配置好 Agent 后，请逐个将 `workspace/cache/product-agent-openclaw/skills`目录下的技能，移动到 `workspace/skills` 目录下，并确保安装对应技能：
+**第三步：安装全部技能**
+多 Agent 配置完成后，将 `workspace/cache/product-agent-openclaw/skills/` 下的技能逐个移动到 `workspace/skills/`，并确保安装：
 
-- 交互原型生成器（interactive-prototype-generator）： `/interactive-prototype-generator/`
-- 飞书需求看板（feishu-requirement-board）： `/feishu-requirement-board/`
-- 搜索引擎（search-engine）： `/search-engine/`
-- 飞书需求录入（feishu-requirement-entry）： `/feishu-requirement-entry/`
-- PRD文档生成器（prd-document-generator）： `/prd-document-generator/`
-- 竞品调研（competitor-research）： `/competitor-research/`
-- 问题追踪器（issue-tracker）： `/issue-tracker/`
-- 报告生成器（report-generator）： `/report-generator/`
-- 逻辑检测器（logic-detector）： `/logic-detector/`
-- 飞书需求归档（feishu-requirement-archive）： `/feishu-requirement-archive/`
-- 业务流程图生成器（business-diagram-generator）： `/business-diagram-generator/`
+- 交互原型生成器（interactive-prototype-generator）：`/interactive-prototype-generator/`
+- 飞书需求看板（feishu-requirement-board）：`/feishu-requirement-board/`
+- 搜索引擎（search-engine）：`/search-engine/`
+- 飞书需求录入（feishu-requirement-entry）：`/feishu-requirement-entry/`
+- PRD文档生成器（prd-document-generator）：`/prd-document-generator/`
+- 竞品调研（competitor-research）：`/competitor-research/`
+- 问题追踪器（issue-tracker）：`/issue-tracker/`
+- 报告生成器（report-generator）：`/report-generator/`
+- 逻辑检测器（logic-detector）：`/logic-detector/`
+- 飞书需求归档（feishu-requirement-archive）：`/feishu-requirement-archive/`
+- 业务流程图生成器（business-diagram-generator）：`/business-diagram-generator/`
 
 请开始引导我配置吧！
 ```
