@@ -10,7 +10,7 @@
 请帮我配置「产品全流程智能体团队」。
 
 **第一步：配置多 Agent 架构**
-- 请先访问 `agents-team-config.md` 学习多 Agent 配置方法
+- 请先访问 `https://github.com/AnatoleRise/Agents/blob/main/product-agent-openclaw/agents-team-config.md` 学习多 Agent 配置方法
 - 优先将项目文件下载到 `workspace/cache` 目录下，按照要求配置多Agent并移动相关文件，如果无法下载文件，则直接读取并安装
 - 按步骤引导我完成
 
