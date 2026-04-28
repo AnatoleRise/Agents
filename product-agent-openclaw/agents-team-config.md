@@ -308,68 +308,44 @@ workspace 路径：`~/.openclaw/workspace`
 
 执行原则：
 
-- 读取对应markdown文件，创建对应文件及内容，严格按照对应markdown文件创建。
+- 请逐个将 `workspace/cache/product-agent-openclaw/`目录下，各子智能体对应 `AGENTS.md\SOUL.md\IDENTITY.md` 文件移动到对应子智能体workspace路径下，对应路径如下：
 - 最小身份内容包含 4 项：子角色身份、职责边界、执行方式、禁止自称主 Agent。
 
 ### `customer_research`（客研需求智能体）
 
 workspace 路径：`~/.openclaw/workspace-customer-research`
 
-AGENTS.md 路径：`/customer_research/AGENTS.md`
-
-SOUL.md 路径：`/customer_research/SOUL.md`
-
-IDENTITY.md 路径：`/customer_research/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/customer_research/`
 
 ### `product_discovery`（产品探索智能体）
 
 workspace 路径：`~/.openclaw/workspace-product-discovery`
 
-AGENTS.md 路径：`/product_discovery/AGENTS.md`
-
-SOUL.md 路径：`/product_discovery/SOUL.md`
-
-IDENTITY.md 路径：`/product_discovery/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/product_discovery/`
 
 ### `user_analysis`（用户分析智能体）
 
 workspace 路径：`~/.openclaw/workspace-user-analysis`
 
-AGENTS.md 路径：`/user_analysis/AGENTS.md`
-
-SOUL.md 路径：`/user_analysis/SOUL.md`
-
-IDENTITY.md 路径：`/user_analysis/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/user_analysis/`
 
 ### `requirement_management`（需求管理智能体）
 
 workspace 路径：`~/.openclaw/workspace-requirement-management`
 
-AGENTS.md 路径：`/requirement_management/AGENTS.md`
-
-SOUL.md 路径：`/requirement_management/SOUL.md`
-
-IDENTITY.md 路径：`/requirement_management/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/requirement_management/`
 
 ### `solution_design`（产品方案智能体）
 
 workspace 路径：`~/.openclaw/workspace-solution-design`
 
-AGENTS.md 路径：`/solution_design/AGENTS.md`
-
-SOUL.md 路径：`/solution_design/SOUL.md`
-
-IDENTITY.md 路径：`/solution_design/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/solution_design/`
 
 ### `requirement_review`（需求评审智能体）
 
 workspace 路径：`~/.openclaw/workspace-requirement-review`
 
-AGENTS.md 路径：`/requirement_review/AGENTS.md`
-
-SOUL.md 路径：`/requirement_review/SOUL.md`
-
-IDENTITY.md 路径：`/requirement_review/IDENTITY.md`
+子智能体路径：`/workspace/cache/product-agent-openclaw/requirement_review/`
 
 ## 第五步：协作与调度方式（主 Agent 规则）
 
