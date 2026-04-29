@@ -11,7 +11,8 @@
 
 **第一步：下载项目文件**
 - 从 `https://github.com/AnatoleRise/Agents/tree/main/product-agent-openclaw` 获取项目文件，完整下载到 `workspace/cache/product-agent-openclaw/` 目录下
-- 若网络原因无法下载，直接进行按照第二步来操作
+- 若目录 `workspace/cache/product-agent-openclaw/` 已存在，则先删除再重新下载覆盖安装
+- 若网络原因无法下载，则跳过下载直接进行第二步
 
 **第二步：配置多 Agent 架构**
 - 参考 `https://github.com/AnatoleRise/Agents/blob/main/product-agent-openclaw/agents-team-config.md` 中的配置说明，完成多 Agent 配置并将相关文件移动到位
