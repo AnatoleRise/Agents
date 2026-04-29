@@ -36,6 +36,11 @@
 - 产品探索（product-exploration）：`/product-exploration/`
 - 竞品网页抓取器（competitor-web-crawler）：`/competitor-web-crawler/`
 - 竞品差异面板（difference-panel）：`/difference-panel/`
+- 应用市场舆情洞察（app-market-sentiment）：`/app-market-sentiment/`
+- 核心业务指标分析（core-metrics-analysis）：`/core-metrics-analysis/`
+- 用户反馈结构化处理（user-feedback-processor）：`/user-feedback-processor/`
+- 主动预警与风险拦截（alert-early-warning）：`/alert-early-warning/`
+- 数据可视化与看板生成（data-visualization）：`/data-visualization/`
 
 请开始引导我配置吧！
 ```
@@ -193,6 +198,7 @@ flowchart TD
 | `solution_design` | `solution_design/` | 产品需求方案智能体：快速生成专业 PRD、业务流程图和可交互 UI 原型，为产品开发提供完整前期方案 |
 | `requirement_review` | `requirement-review/` | 需求评审智能体：PRD 审查专家，支持多角色全方位审查、迭代校验、追溯元数据完整性检查与结构化评审纪要 |
 | `requirement_management` | `requirement_management/` | 需求管理助手：飞书需求管理系统日常运维，负责刷新看板、归档需求、生成周报 |
+| `user_analysis` | `user_analysis/` | 用户分析智能体：自动化获取用户数据、反馈、评论，进行结构化整理与归类，分析问题并主动预警，为产品需求提供数据支撑 |
 
 ### 5.2 已实现 Skill
 
@@ -213,9 +219,8 @@ flowchart TD
 | `产品探索` | `skills/product-exploration/` | 竞品分析主技能，编排竞品网页抓取、结构化报告与差异面板输出 |
 | `竞品网页抓取器` | `skills/competitor-web-crawler/` | 根据产品探索意图自动发现并抓取竞品网页，返回去重后的结构化网页证据 |
 | `竞品差异面板` | `skills/difference-panel/` | 将竞品数据转化为维度化差异面板，标注领先/持平/缺失/未知及来源引用 |
-
-### 5.3 未实现 子智能体
-
-| 子智能体名称 | 规划目录 | 说明 |
-|-----------|------|------|
-| `user_analysis` | `user_analysis/` | 用户分析智能体：应用市场舆情洞察与核心业务指标分析，评论采集与指标分析可按 skill/MCP 分层接入 |
+| `应用市场舆情洞察` | `skills/app-market-sentiment/` | 分析应用商店用户评论，识别版本发布后舆情风险，提炼用户痛点需求，生成痛点排行榜和版本趋势对比 |
+| `核心业务指标分析` | `skills/core-metrics-analysis/` | 通过规模指标（DAU/MAU）与价值指标（容量/流量）交叉分析，诊断产品健康度与增长质量，支持量价背离检测 |
+| `用户反馈结构化处理` | `skills/user-feedback-processor/` | 整合客服记录、应用商店、社群、问卷等多渠道反馈，进行清洗、去重、归类，提取痛点与需求 |
+| `主动预警与风险拦截` | `skills/alert-early-warning/` | 实时捕捉舆情爆发点与指标异常值，支持多级别预警（高/中/低）、多渠道通知、智能阈值调整 |
+| `数据可视化与看板生成` | `skills/data-visualization/` | 将分析结果转化为直观可交互的 HTML 看板，支持趋势图、饼图、热力图、词云等多种图表类型 |
