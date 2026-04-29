@@ -7,7 +7,7 @@
 > **使用方式**：将以下提示词直接发送给你的 OpenClaw，即可启动一键配置。
 
 ```
-请帮我配置「产品全流程智能体团队」。
+请帮我配置「产品管理智能体团队」。
 
 **第一步：下载项目文件**
 - 从 `https://github.com/AnatoleRise/Agents/tree/main/product-agent-openclaw` 获取项目文件，完整下载到 `workspace/cache/product-agent-openclaw/` 目录下
