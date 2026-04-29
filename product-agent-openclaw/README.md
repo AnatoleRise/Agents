@@ -31,6 +31,9 @@
 - 逻辑检测器（logic-detector）：`/logic-detector/`
 - 飞书需求归档（feishu-requirement-archive）：`/feishu-requirement-archive/`
 - 业务流程图生成器（business-diagram-generator）：`/business-diagram-generator/`
+- 产品探索（product-exploration）：`/product-exploration/`
+- 竞品网页抓取器（competitor-web-crawler）：`/competitor-web-crawler/`
+- 竞品差异面板（difference-panel）：`/difference-panel/`
 
 请开始引导我配置吧！
 ```
@@ -192,11 +195,9 @@ flowchart TD
 | `PRD逻辑检测` | `skills/logic-detector/` | 形式化逻辑验证：状态机完整性、跨章节矛盾检测、数据流一致性、时序依赖验证（问题模式 P-36~P-55） |
 | `问题追踪器` | `skills/issue-tracker/` | 问题工单化、PRD 版本 Diff、修复效果复检（Q1-Q24 + P-01~P-35）、整改统计与趋势 |
 | `报告生成器` | `skills/report-generator/` | 结构化报告模板渲染、数据清洗与多格式报告输出 |
-
-### 5.2 后续补充项
-
-| Skill 名称 | 路径 | 说明 |
-|-----------|------|------|
-| `飞书需求录入` | `skills/feishu-requirement-entry/` | 需求信息标准化录入飞书多维表格，支撑需求漏斗与全流程管理 |
-| `飞书需求看板` | `skills/feishu-requirement-board/` | 需求看板可视化生成与周报自动输出，支撑透明化决策 |
-| `飞书需求归档` | `skills/feishu-requirement-archive/` | 需求全周期归档统计，沉淀审计与复盘资产 |
+| `飞书需求录入` | `skills/feishu-requirement-entry/` | 需求信息标准化录入飞书多维表格，智能评估并生成分析报告 |
+| `飞书需求看板` | `skills/feishu-requirement-board/` | 飞书多维表格需求数据可视化看板，支持筛选、图表与周报自动输出 |
+| `飞书需求归档` | `skills/feishu-requirement-archive/` | 需求全周期归档统计，周度扫描已上线/已转出需求并生成归档报告 |
+| `产品探索` | `skills/product-exploration/` | 竞品分析主技能，编排竞品网页抓取、结构化报告与差异面板输出 |
+| `竞品网页抓取器` | `skills/competitor-web-crawler/` | 根据产品探索意图自动发现并抓取竞品网页，返回去重后的结构化网页证据 |
+| `竞品差异面板` | `skills/difference-panel/` | 将竞品数据转化为维度化差异面板，标注领先/持平/缺失/未知及来源引用 |

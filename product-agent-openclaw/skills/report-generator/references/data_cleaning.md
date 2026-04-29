@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Transform raw search results into structured data suitable for report generation.
+Transform raw search and fetched webpage results into structured data suitable for product exploration reports and difference panels.
 
 ## Exclusion Rules
 
-Discard results matching these URL patterns:
+Discard results matching these URL patterns in normal analysis:
 
 ```
 google.com/search
@@ -21,11 +21,13 @@ capterra.com
 trustpilot.com
 ```
 
+For `market_monitoring`, weak or social sources may be retained only as unverified risk signals when they contain specific evidence. Mark them as `[unverified]`.
+
 ## Structured Data Extraction
 
 ### Product Information
 
-From each valid search result, extract:
+From each valid crawled result, extract:
 
 | Field | Source | Rule |
 |-------|--------|------|
@@ -34,6 +36,10 @@ From each valid search result, extract:
 | `website` | Result URL | Must be a valid HTTP URL |
 | `description` | Content snippet | First 200 characters of relevant content |
 | `features` | Content | Named capabilities mentioned in the text |
+| `pricing` | Pricing page/content | Plan names, public prices, billing model |
+| `updates` | Changelog/blog/news | Release date, change type, impacted feature |
+| `risk_signals` | News/status/user feedback | Complaint, outage, negative news, uncertainty |
+| `source_type` | URL/content | official, pricing, docs, changelog, media, report, user_feedback |
 
 ### Verification Status
 
@@ -48,8 +54,23 @@ Extract qualitative statements about:
 - Technology directions
 - User preferences
 - Competitive dynamics
+- Market gaps and product opportunities
+- Feature implementation patterns
+- Pricing changes and campaign signals
+- Risks, complaints, outages, or negative sentiment
 
 Mark each insight with its source URL.
+
+### Difference Panel Dimensions
+
+Prepare normalized dimensions for `difference-panel`:
+
+| Intent | Dimensions |
+|--------|------------|
+| `market_landscape` | market_positioning, target_users, core_capabilities, pricing_band, ecosystem, opportunity_gap |
+| `feature_iteration` | entry_point, core_flow, automation_level, rules_permissions, data_feedback, user_feedback, known_pitfalls |
+| `product_competition` | positioning, core_features, pricing_model, target_users, integrations, differentiation |
+| `market_monitoring` | release_updates, pricing_changes, market_campaigns, negative_signals, risk_level, response_suggestion |
 
 ## Deduplication
 
@@ -68,6 +89,9 @@ Mark each insight with its source URL.
       "website": "string",
       "description": "string",
       "features": ["string"],
+      "pricing": "string",
+      "updates": ["string"],
+      "risk_signals": ["string"],
       "verification_status": "verified | partial | unverified",
       "sources": [{"url": "string", "title": "string"}]
     }
@@ -77,6 +101,16 @@ Mark each insight with its source URL.
       "category": "string",
       "content": "string",
       "source_url": "string"
+    }
+  ],
+  "difference_dimensions": [
+    {
+      "dimension": "string",
+      "product": "string",
+      "status": "领先 | 持平 | 缺失 | 未知",
+      "evidence": "string",
+      "source_url": "string",
+      "uncertainty": "verified | partial | unverified"
     }
   ],
   "excluded": [

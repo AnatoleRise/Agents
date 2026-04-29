@@ -2,129 +2,147 @@
 
 ## Purpose
 
-Define the structure and formatting rules for the final competitor research report.
+Define the structure and formatting rules for product exploration reports. The final output is always a Markdown competitor analysis report with an embedded competitor difference panel.
 
 ## Report Types
 
-Select the appropriate template based on the intent type:
+Select the appropriate template based on `intent_type`.
 
-### 1. Market Analysis Report
+### 1. Product Planning and Market Landscape Report
 
-Use when intent = `market_analysis`
+Use when `intent_type = market_landscape`.
 
 ```markdown
-# {target_product} Market Analysis Report
+# {target_market} 产品探索与竞品分析报告
 
 ---
 
 ## Executive Summary
 
-[2-3 sentences summarizing market findings, number of players, and key trends]
+[2-3 sentences summarizing market structure, key players, opportunity gaps, and major risks.]
 
 ---
 
-## Market Overview
+## 研究范围与信息缺口
 
-- Market size and growth trajectory
-- Key market drivers
-- Major challenges
-
----
-
-## Major Players
-
-| # | Product | Vendor | Website | Description |
-|---|---------|--------|---------|-------------|
-| 1 | | | | |
-| 2 | | | | |
+| 项目 | 内容 |
+|------|------|
+| 目标市场 | |
+| 覆盖竞品 | |
+| 信息来源 | |
+| 信息缺口 | |
 
 ---
 
-## Product Comparison
+## 竞品差异面板
 
-| Dimension | Product A | Product B | Product C |
-|-----------|-----------|-----------|-----------|
-| Core Features | | | |
-| Pricing Model | | | |
-| Target Users | | | |
-| Integration | | | |
+[由 difference-panel 子技能填充]
 
 ---
 
-## Market Trends
+## 市场概览
 
-1. **Trend 1**: Description with evidence [source]
-2. **Trend 2**: Description with evidence [source]
+- 市场格局与主要玩家 [1]
+- 用户/客户需求变化 [2]
+- 增长驱动与主要阻碍 [3]
 
 ---
 
-## Recommendations
+## 主要玩家
 
-- **Enterprise**: Recommended product and why
-- **SMB**: Recommended product and why
-- **Individual**: Recommended product and why
+| # | Product | Vendor | Website | Positioning | Verification |
+|---|---------|--------|---------|-------------|--------------|
+| 1 | | | | | |
+
+---
+
+## 机会点与空白
+
+| 机会点 | 证据 | 相关竞品 | 不确定性 |
+|--------|------|----------|----------|
+| | | | |
+
+---
+
+## 风险与约束
+
+| 风险 | 影响 | 证据 | 建议验证 |
+|------|------|------|----------|
+| | | | |
+
+---
+
+## 产品规划建议
+
+- 可考虑方向 1：... [1]
+- 需验证问题 1：...
 
 ---
 
 ## References
 
 [1] Title - URL
-[2] Title - URL
 ```
 
-### 2. Product Deep Research Report
+### 2. Feature Design and Iteration Report
 
-Use when intent = `product_deep_research`
+Use when `intent_type = feature_iteration`.
 
 ```markdown
-# {target_product} Research Report
+# {feature_focus} 功能探索与竞品分析报告
 
 ---
 
 ## Executive Summary
 
-[2-3 sentences about the product]
+[2-3 sentences summarizing competitor implementations, best practices, pitfalls, and design opportunities.]
 
 ---
 
-## Product Overview
+## 研究范围与信息缺口
 
-- What it is and what problem it solves
-- Target users
-- Market positioning
-
----
-
-## Core Features
-
-1. **Feature 1**: Description
-2. **Feature 2**: Description
+| 项目 | 内容 |
+|------|------|
+| 目标功能 | |
+| 覆盖竞品 | |
+| 覆盖页面 | |
+| 信息缺口 | |
 
 ---
 
-## Technology & Architecture
+## 竞品差异面板
 
-[Technical details, integrations, APIs if available]
-
----
-
-## Pricing
-
-| Plan | Price | Key Features |
-|------|-------|-------------|
-| Free | | |
-| Pro | | |
-| Enterprise | | |
+[由 difference-panel 子技能填充]
 
 ---
 
-## Strengths & Weaknesses
+## 竞品实现方式
 
-**Strengths:**
-- Strength 1 [source]
+| Product | Entry Point | Core Flow | Rules/Permissions | Feedback/Data | Sources |
+|---------|-------------|-----------|-------------------|---------------|---------|
+| | | | | | |
 
-**Weaknesses:**
-- Weakness 1 [source]
+---
+
+## 用户反馈与已知坑点
+
+| 问题/反馈 | 涉及产品 | 证据 | 可借鉴/规避 |
+|-----------|----------|------|-------------|
+| | | | |
+
+---
+
+## 最佳实践提炼
+
+1. **Practice 1**: Description with evidence [1]
+2. **Practice 2**: Description with evidence [2]
+
+---
+
+## 功能方案建议
+
+- 可考虑设计：...
+- 需要验证：...
 
 ---
 
@@ -135,16 +153,33 @@ Use when intent = `product_deep_research`
 
 ### 3. Competitive Comparison Report
 
-Use when intent = `product_competition`
+Use when `intent_type = product_competition`.
 
 ```markdown
-# {target_product} Competitive Analysis Report
+# {target_product} 竞品对比分析报告
 
 ---
 
 ## Executive Summary
 
-[2-3 sentences about the competitive landscape]
+[2-3 sentences about the competitive landscape and differentiation.]
+
+---
+
+## 研究范围与信息缺口
+
+| 项目 | 内容 |
+|------|------|
+| 目标产品 | |
+| 对比竞品 | |
+| 信息来源 | |
+| 信息缺口 | |
+
+---
+
+## 竞品差异面板
+
+[由 difference-panel 子技能填充]
 
 ---
 
@@ -161,30 +196,91 @@ Use when intent = `product_competition`
 
 ## Feature Comparison
 
-| Feature | Product A | Product B | Product C |
-|---------|-----------|-----------|-----------|
-| Feature 1 | ✅/❌ | ✅/❌ | ✅/❌ |
-| Feature 2 | ✅/❌ | ✅/❌ | ✅/❌ |
-
----
-
-## Pricing Comparison
-
-[Detailed pricing breakdown and analysis]
+| Feature | Product A | Product B | Product C | Evidence |
+|---------|-----------|-----------|-----------|----------|
+| Feature 1 | Yes/No/Unknown | Yes/No/Unknown | Yes/No/Unknown | [1] |
 
 ---
 
 ## Differentiation
 
-- **Product A**: Unique strength
-- **Product B**: Unique strength
+- **Product A**: Unique strength with evidence [1]
+- **Product B**: Unique strength with evidence [2]
 
 ---
 
 ## Recommendations
 
 - Best for {scenario}: {product} because...
-- Best for {scenario}: {product} because...
+- Needs validation: ...
+
+---
+
+## References
+
+[1] Title - URL
+```
+
+### 4. Market Monitoring and Risk Alert Report
+
+Use when `intent_type = market_monitoring`.
+
+```markdown
+# {target_product_or_market} 市场动态与风险预警报告
+
+---
+
+## Executive Summary
+
+[2-3 sentences summarizing recent updates, pricing/campaign changes, negative signals, and risk level.]
+
+---
+
+## 监控范围与信息缺口
+
+| 项目 | 内容 |
+|------|------|
+| 监控对象 | |
+| 监控信号 | release / pricing / campaign / risk |
+| 时间范围 | |
+| 信息缺口 | |
+
+---
+
+## 竞品差异面板
+
+[由 difference-panel 子技能填充]
+
+---
+
+## 动态摘要
+
+| Date | Product | Signal | Summary | Source | Verification |
+|------|---------|--------|---------|--------|--------------|
+| | | | | | |
+
+---
+
+## 价格与市场活动变化
+
+| Product | Change | Evidence | Potential Impact |
+|---------|--------|----------|------------------|
+| | | | |
+
+---
+
+## 风险信号
+
+| Risk | Product | Severity | Evidence | Uncertainty |
+|------|---------|----------|----------|-------------|
+| | | Low/Medium/High | | |
+
+---
+
+## 响应建议
+
+- 需要立即关注：...
+- 后续监控建议：...
 
 ---
 
@@ -195,9 +291,10 @@ Use when intent = `product_competition`
 
 ## Writing Rules
 
-1. **Evidence-based**: Every claim should reference a source `[1]`
-2. **No fabrication**: Write "information not found in search results" for missing data
-3. **Objective tone**: Avoid promotional language
-4. **Concise**: Prefer tables over paragraphs for comparative data
-5. **Source attribution**: List all source URLs in the References section
-6. **Honest gaps**: Explicitly note what information is missing or unverified
+1. **Evidence-based**: Every claim should reference a source `[1]`.
+2. **No fabrication**: Write "未在搜索结果中找到" for missing data.
+3. **Objective tone**: Avoid promotional language and final business decisions.
+4. **Panel required**: Every report must include `## 竞品差异面板`.
+5. **Concise**: Prefer tables over paragraphs for comparative data.
+6. **Source attribution**: List all source URLs in the References section.
+7. **Honest gaps**: Explicitly note what information is missing or unverified.
