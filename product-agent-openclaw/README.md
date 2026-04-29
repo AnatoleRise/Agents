@@ -32,6 +32,7 @@
 - 逻辑检测器（logic-detector）：`/logic-detector/`
 - 飞书需求归档（feishu-requirement-archive）：`/feishu-requirement-archive/`
 - 业务流程图生成器（business-diagram-generator）：`/business-diagram-generator/`
+- 客研管理（customer-research）：`/customer-research/`
 - 产品探索（product-exploration）：`/product-exploration/`
 - 竞品网页抓取器（competitor-web-crawler）：`/competitor-web-crawler/`
 - 竞品差异面板（difference-panel）：`/difference-panel/`
@@ -182,9 +183,18 @@ flowchart TD
 - 目标是实现需求文档、原型等核心产物自动同步至研发团队。
 - 减少需求传递误差，压缩从需求梳理到研发启动的周期。
 
-## 5. 配套 Skill 清单与后续补充项
+## 5. 配套子智能体和Skill清单
+### 5.1 已实现 子智能体
 
-### 5.1 已实现 Skill
+| 子智能体名称 | 路径 | 说明 |
+|-----------|------|------|
+| `customer_research` | `customer_research/` | 客研管理智能体：负责用户需求深度访谈、访谈内容整理、用户痛点提炼与访谈报告生成，打通"收集→梳理→分析"链路 |
+| `product_discovery` | `product_discovery/` | 产品探索智能体：竞品与市场探索专家，自动抓取竞品网页、整理结构化证据、输出分析报告与竞品差异面板 |
+| `solution_design` | `solution_design/` | 产品需求方案智能体：快速生成专业 PRD、业务流程图和可交互 UI 原型，为产品开发提供完整前期方案 |
+| `requirement_review` | `requirement-review/` | 需求评审智能体：PRD 审查专家，支持多角色全方位审查、迭代校验、追溯元数据完整性检查与结构化评审纪要 |
+| `requirement_management` | `requirement_management/` | 需求管理助手：飞书需求管理系统日常运维，负责刷新看板、归档需求、生成周报 |
+
+### 5.2 已实现 Skill
 
 | Skill 名称 | 路径 | 说明 |
 |-----------|------|------|
@@ -196,6 +206,7 @@ flowchart TD
 | `PRD逻辑检测` | `skills/logic-detector/` | 形式化逻辑验证：状态机完整性、跨章节矛盾检测、数据流一致性、时序依赖验证（问题模式 P-36~P-55） |
 | `问题追踪器` | `skills/issue-tracker/` | 问题工单化、PRD 版本 Diff、修复效果复检（Q1-Q24 + P-01~P-35）、整改统计与趋势 |
 | `报告生成器` | `skills/report-generator/` | 结构化报告模板渲染、数据清洗与多格式报告输出 |
+| `客研管理` | `skills/customer-research/` | 从访谈记录中提炼痛点，生成结构化访谈报告、候选需求条目与待澄清问题列表 |
 | `飞书需求录入` | `skills/feishu-requirement-entry/` | 需求信息标准化录入飞书多维表格，智能评估并生成分析报告 |
 | `飞书需求看板` | `skills/feishu-requirement-board/` | 飞书多维表格需求数据可视化看板，支持筛选、图表与周报自动输出 |
 | `飞书需求归档` | `skills/feishu-requirement-archive/` | 需求全周期归档统计，周度扫描已上线/已转出需求并生成归档报告 |
