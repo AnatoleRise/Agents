@@ -34,6 +34,10 @@
 - product-agent/IDENTITY.md
 - product-agent/SOUL.md
 
+【项目仓库】
+- https://github.com/AnatoleRise/Agents/tree/main/product-agent-Qclaw-Hermes
+- 引导：可克隆本仓库或在 GitHub 在线浏览，以对照完整目录、skills 与最新文档，便于同步与校验配置。
+
 【请在该智能体真实 workspace 根目录完成以下操作】
 1) 用上述三件套内容覆盖 AGENTS.md、IDENTITY.md、SOUL.md（文件名保持大写）。
 2) 修改完成后立即回传这三个文件的最终内容摘要，确认已生效。

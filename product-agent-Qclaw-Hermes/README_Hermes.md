@@ -26,6 +26,10 @@
 - product-agent/IDENTITY.md
 - product-agent/SOUL.md
 
+【项目仓库】
+- https://github.com/AnatoleRise/Agents/tree/main/product-agent-Qclaw-Hermes
+- 引导：可克隆本仓库或在 GitHub 在线浏览，以对照完整目录、skills 与最新文档，便于同步与校验配置。
+
 【修改 SOUL.md 文件】
 1) 读取上述三件套源文件内容，并将三者信息合并写入 `~/.hermes/SOUL.md`。
 2) 修改完成后立即回传 `~/.hermes/SOUL.md` 的最终内容摘要，确认已生效。
